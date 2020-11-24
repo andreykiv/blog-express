@@ -48,7 +48,7 @@ app.get("/", async (req, res) => {
   } 
 })
 
-app.get('/posts/:id/body', async (req, res) => {
+app.get('/posts/:id', async (req, res) => {
   const _id = req.params.id
 
   try {
