@@ -1,0 +1,19 @@
+<%- include("./partials/head.ejs") %>  
+
+<%- include("./partials/nav.ejs") %>   
+        
+<h2 class="centeredH1">Main page of the blog:</h2>
+
+    <% posts.forEach((post) => { %>
+        <div class=mainContainer>
+            <a href="/posts/<%= post._id %>/body">
+                <div class="container">
+                    <h3><%= post.title %></h3>
+                    <p><%= post.snippet %></p>
+                </div>
+            </a>
+        </div>
+    <% }) %>
+
+<%- include("./partials/footer.ejs") %>
+
